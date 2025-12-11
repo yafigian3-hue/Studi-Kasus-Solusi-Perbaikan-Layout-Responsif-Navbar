@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {},
+        plugins: [],
+      };
+    </script>
+
+    <title>Eror</title>
+  </head>
+<body class="bg-gray-100">
+
+  <!-- NAVBAR ERROR -->
+  <nav class="bg-white shadow p-4 w-[900px] mx-auto flex justify-between">
+
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold">MySite</h1>
+
+    <!-- Menu (Error: tidak responsif, tidak bisa sembunyi) -->
+    <ul class="flex gap-6 text-gray-700 text-lg">
+      <li>Home</li>
+      <li>About</li>
+      <li>Services</li>
+      <li>Contact</li>
+    </ul>
+
+    <!-- Hamburger (Error: selalu tampil, tidak berfungsi) -->
+    <button class="text-3xl">☰</button>
+
+  </nav>
+
+  <h1 class="text-center text-3xl font-bold mb-5 text-red-600">Grid Error Version</h1>
+
+
+  <!-- GRID ERROR -->
+<div class="grid" style="grid-template-columns: 200px 100px 400px;">
+  
+  <div class="p-5 bg-red-200 text-red-900 border">
+    Item 1 - width tidak responsif
+  </div>
+
+  <div class="p-5 bg-red-200 text-red-900 border">
+    Item 2 - memaksa lebar kecil
+  </div>
+
+  <div class="p-5 bg-red-200 text-red-900 border">
+    Item 3 - memaksa lebar besar sehingga meledak di mobile
+  </div>
+
+  <div class="p-5 bg-red-200 text-red-900 border">
+    Item 4 - tidak auto wrap
+  </div>
+
+</div>
+
+  <div class="mt-5 text-center">
+    <p>Versi yang sudah diperbaiki:</p>
+    <a href="fixed.html" class="text-blue-600 underline">Klik di sini</a>
+  </div>
+
+</body>
+
+</html>
