@@ -1,102 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {},
-    };
-  </script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {},
+      };
+    </script>
 
-  <title>Navbar Fixed - Tailwind</title>
-</head>
-<body class="bg-gray-100">
+    <title>Navbar Fixed - Tailwind</title>
+  </head>
+  <body class="bg-gray-100">
+    <!-- NAVBAR FIXED & RESPONSIVE -->
+    <nav
+      class="sticky top-0 w-full backdrop-blur bg-white/70 z-10 shadow-lg transition-colors duration-300"
+    >
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <!-- LOGO -->
+          <a href="#" class="text-2xl font-bold text-indigo-600">MySite</a>
 
-<!-- NAVBAR FIXED & RESPONSIVE -->
-<nav class="sticky top-0 w-full backdrop-blur bg-white/70 z-10 shadow-lg transition-colors duration-300">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="flex justify-between items-center h-16">
+          <!-- MENU DESKTOP -->
+          <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+            <li><a href="#" class="hover:underline">Home</a></li>
+            <li><a href="#" class="hover:underline">About</a></li>
+            <li><a href="#" class="hover:underline">Services</a></li>
+            <li><a href="#" class="hover:underline">Contact</a></li>
+          </ul>
 
-      <!-- LOGO -->
-      <a href="#" class="text-2xl font-bold text-indigo-600">Fixed</a>
+          <!-- HAMBURGER -->
+          <button
+            id="menuBtn"
+            class="md:hidden text-3xl text-gray-700 focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
 
-      <!-- MENU DESKTOP -->
-      <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
-        <li><a href="#" class="hover:underline">Home</a></li>
-        <li><a href="#" class="hover:underline">About</a></li>
-        <li><a href="#" class="hover:underline">Services</a></li>
-        <li><a href="#" class="hover:underline">Contact</a></li>
-      </ul>
+      <!-- MENU MOBILE -->
+      <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+        <ul class="flex flex-col text-gray-700 font-medium py-3">
+          <li><a class="py-2 px-4 hover:underline" href="#">Home</a></li>
+          <li><a class="py-2 px-4 hover:underline" href="#">About</a></li>
+          <li><a class="py-2 px-4 hover:underline" href="#">Services</a></li>
+          <li><a class="py-2 px-4 hover:underline" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-      <!-- HAMBURGER -->
-      <button
-        id="menuBtn"
-        class="md:hidden text-3xl text-gray-700 focus:outline-none"
-        aria-label="Toggle Menu"
-      >
-        ☰
-      </button>
+    <h1 class="text-center text-3xl font-bold mb-5 p-5 text-green-600">
+      Fixed Version
+    </h1>
+
+    <!-- GRID FIXED & RESPONSIVE -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="p-5 bg-white shadow rounded-xl">
+        <h2 class="font-semibold text-lg mb-2">Item 1</h2>
+        <p class="text-gray-600">Layout responsif otomatis.</p>
+      </div>
+
+      <div class="p-5 bg-white shadow rounded-xl">
+        <h2 class="font-semibold text-lg mb-2">Item 2</h2>
+        <p class="text-gray-600">Lebar kolom mengikuti ukuran layar.</p>
+      </div>
+
+      <div class="p-5 bg-white shadow rounded-xl">
+        <h2 class="font-semibold text-lg mb-2">Item 3</h2>
+        <p class="text-gray-600">Tidak ada overflow atau layout pecah.</p>
+      </div>
+
+      <div class="p-5 bg-white shadow rounded-xl">
+        <h2 class="font-semibold text-lg mb-2">Item 4</h2>
+        <p class="text-gray-600">Grid wrap dengan rapi di mobile.</p>
+      </div>
+
+      <div class="p-5 bg-white shadow rounded-xl">
+        <h2 class="font-semibold text-lg mb-2">Item 5</h2>
+        <p class="text-gray-600">Styling konsisten.</p>
+      </div>
+
+      <div class="p-5 bg-white shadow rounded-xl">
+        <h2 class="font-semibold text-lg mb-2">Item 6</h2>
+        <p class="text-gray-600">Cocok untuk portfolio.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- MENU MOBILE -->
-  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-    <ul class="flex flex-col text-gray-700 font-medium py-3">
-      <li><a class="py-2 px-4 hover:underline" href="#">Home</a></li>
-      <li><a class="py-2 px-4 hover:underline" href="#">About</a></li>
-      <li><a class="py-2 px-4 hover:underline" href="#">Services</a></li>
-      <li><a class="py-2 px-4 hover:underline" href="#">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+    <!-- CONTENT -->
+    <div class="mt-10 text-center">
+      <p class="text-gray-700">Lihat versi error:</p>
+      <a href="index.html" class="text-blue-600 underline">Klik di sini</a>
+    </div>
 
-<h1 class="text-center text-3xl font-bold mb-5 p-5 text-green-600">Fixed Version</h1>
+    <footer class="mt-10 p-5 border-t-4 border-gray-500 opacity-50 rounded-lg">
+      <p class="text-center font-mono">
+        Penjelasan Teknis Perbaikan: Bug navbar diperbaiki dengan menggunakan
+        JavaScript untuk toggle menu dan Tailwind's hidden/block classe. Grid
+        diperbaiki dengan menambahkan breakpoint sm:grid-cols-1 di tailwind agar
+        grid rapi di mobile
+      </p>
+    </footer>
 
-<!-- GRID FIXED & RESPONSIVE -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-  <div class="p-5 bg-white shadow rounded-xl">
-    <h2 class="font-semibold text-lg mb-2">Item 1</h2>
-    <p class="text-gray-600">Layout responsif otomatis.</p>
-  </div>
-
-  <div class="p-5 bg-white shadow rounded-xl">
-    <h2 class="font-semibold text-lg mb-2">Item 2</h2>
-    <p class="text-gray-600 ">Lebar kolom mengikuti ukuran layar.</p>
-  </div>
-
-  <div class="p-5 bg-white shadow rounded-xl">
-    <h2 class="font-semibold text-lg mb-2">Item 3</h2>
-    <p class="text-gray-600">Tidak ada overflow atau layout pecah.</p>
-  </div>
-
-  <div class="p-5 bg-white shadow rounded-xl">
-    <h2 class="font-semibold text-lg mb-2">Item 4</h2>
-    <p class="text-gray-600">Grid wrap dengan rapi di mobile.</p>
-  </div>
-
-  <div class="p-5 bg-white shadow rounded-xl">
-    <h2 class="font-semibold text-lg mb-2">Item 5</h2>
-    <p class="text-gray-600">Styling konsisten.</p>
-  </div>
-
-  <div class="p-5 bg-white shadow rounded-xl">
-    <h2 class="font-semibold text-lg mb-2">Item 6</h2>
-    <p class="text-gray-600">Cocok untuk portfolio.</p>
-  </div>
-
-</div>
-
-
-<!-- CONTENT -->
-<div class="mt-10 text-center">
-  <p class="text-gray-700">Lihat versi error:</p>
-  <a href="index.html" class="text-blue-600 underline">Klik di sini</a>
-</div>
-<script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
